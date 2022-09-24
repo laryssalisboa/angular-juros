@@ -1,0 +1,30 @@
+<h1>Qual é sua opção desejada?</h1>
+
+<input type="radio" [(ngModel)]="option" [value]="1" />1: Juros Simples
+<br>
+<input type="radio" [(ngModel)]="option" [value]="2" />2: Juros Composto
+
+<h2>Opção: {{ option }}</h2>
+<hr>
+
+<div *ngIf="option == '1'">Você escolheu a opção "Juros simples"! <br>
+  A fórmula para calcular os juros compostos é: <br>
+
+J = c . i . t
+
+<br> Considere que: <br>
+
+J: juros; <br>
+C: capital (R$1500); <br>
+I: taxa (30%); <br>
+T: período (12 meses). <br>
+</div>
+<div *ngIf="option == '2'">Você escolheu a opção "Juros composto"! <br>
+  A fórmula para calcular os juros compostos é: <br>
+  M = C.(1-i)^n <br>
+  sendo M o montante <br>
+  C o capital inicial <br>
+  i a taxa de juros <br>
+  n o tempo. <br>
+</div> 
+
